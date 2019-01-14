@@ -1,0 +1,51 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Admin</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<br>
+<h1 style="text-align: center;">Welcome Admin</h1>
+<br>
+<br>
+<h2 style="text-align: center;">Approve or Reject</h2>
+<!--
+  Retrieving Data stored in FireBase Database-->
+<ion-list>
+    <ion-item class="text" *ngFor="let item of items|async;let i=index">
+      <p *ngIf="item.status=='1'">
+        Name:{{item.username}}
+      <br>
+      Email:{{item.email}}
+      <br>
+      MobileNo:{{item.mobileno}}
+      <br>
+      UserType:{{item.usertype}}
+      <br>
+     <button ion-button icon-only (click)="updateStatus(i,2)">
+     <ion-icon name="checkmark-circle"></ion-icon>
+     </button>
+
+     <button ion-button icon-only (click)="updateStatus(i,-1)">
+     <ion-icon name="close-circle"></ion-icon>
+     </button>
+      </p>
+      
+      
+    </ion-item>
+
+  </ion-list>
+
+
+<!-- Only icon (no text) -->
+<!--button ion-button icon-only>
+   <ion-icon name="checkmark-circle"></ion-icon>
+</button-->
+
+
+</ion-content>

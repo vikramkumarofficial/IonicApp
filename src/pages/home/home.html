@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      DeepBlue Project
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+ <!-- Float the icon left -->
+<button ion-button icon-start (click)="openLoginPage()">
+  <ion-icon name="log-in"></ion-icon>
+  Log In
+</button>
+&nbsp;&nbsp;&nbsp;
+<!-- Float the icon right -->
+<button ion-button icon-end (click)="openSignupPage()">
+  Sign Up
+  <ion-icon name="person-add" md="md-person-add"></ion-icon>
+</button>
+
+<!--
+  Retrieving Data stored in FireBase Database
+<ion-list>
+    <ion-item class="text" *ngFor="let item of items | async">
+      {{item | json}}
+    </ion-item>
+  </ion-list-->
+
+
+<!-- Only icon (no text) -->
+<!--button ion-button icon-only>
+  <ion-icon name="home"></ion-icon>
+</button-->
+</ion-content>

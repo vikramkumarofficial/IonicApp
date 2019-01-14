@@ -1,0 +1,8 @@
+{
+  "name": "appdp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "pro_id": "4e1a4cec"
+}
